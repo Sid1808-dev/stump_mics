@@ -17,3 +17,8 @@ Personalized AI Based Live Match Commentary
 ## Costing Model for Product Release:
 
 ![image](https://github.com/Sid1808-dev/stump_mics/assets/60344472/25a41d0b-4a5a-4459-aef0-211d25c4871a)
+
+
+## Sample POC Presentation Video:
+
+https://youtu.be/CYxSmWpggAE?si=DuLaQzRuLSxMFRt6
