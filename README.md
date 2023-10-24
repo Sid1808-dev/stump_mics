@@ -12,3 +12,8 @@ Personalized AI Based Live Match Commentary
 
 
 ![image](https://github.com/Sid1808-dev/stump_mics/assets/60344472/76e58b4f-5871-4722-ab4a-096aa172ea16)
+
+
+## Costing Model for Product Release:
+
+![image](https://github.com/Sid1808-dev/stump_mics/assets/60344472/25a41d0b-4a5a-4459-aef0-211d25c4871a)
