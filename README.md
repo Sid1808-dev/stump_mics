@@ -11,3 +11,4 @@ Stump Mics AI Avatar based custom live cricket commentary service
 ![image](https://github.com/Sid1808-dev/stump_mics/assets/60344472/bea9a180-650a-4a1a-bd2f-1920796ad4ca)
 
 
+![image](https://github.com/Sid1808-dev/stump_mics/assets/60344472/76e58b4f-5871-4722-ab4a-096aa172ea16)
