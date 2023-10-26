@@ -8,8 +8,7 @@ def paraphrase_live_commentary(commentary_word: str):
     """
     chat_gpt_response = openai.Completion.create(
         model="gpt-3.5-turbo-instruct",
-        prompt=f"Generate the commentary for {commentary_word} in Danni Morrison querky style in Danni Morrison's "
-               f"iconic style"
+        prompt=f"Generate the commentary for {commentary_word}  in Danni Morrison's iconic style"
     )
 
     paraphrased_commentary_style = str(chat_gpt_response['choices'][0]['text'])
