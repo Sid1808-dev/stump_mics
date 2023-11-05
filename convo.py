@@ -1,4 +1,5 @@
 import requests
+from commentary_phrases import get_commentary
 import soundfile as sf
 import soundcard as sc
 
@@ -29,23 +30,24 @@ def live_commentary_speech(commentary_word: str):
     AI Commentator
     """
 
+    commentary_word = get_commentary()
     data = {
         "text": f"{commentary_word}",
         "model_id": "eleven_multilingual_v2",
         "voice_settings": {
             "stability": 0.5,
-            "similarity_boost": 0.75,
+            "similarity_boost": 0.95,
             "style_exaggeration": 0.42
         }
     }
 
     response = requests.post(ELEVEN_LABS_AVATAR_VOICE_URL, json=data, headers=headers)
-    with open('output.mp3', 'wb') as f:
+    with open('output.wav', 'wb') as f:
         for chunk in response.iter_content(chunk_size=CHUNK_SIZE):
             if chunk:
                 f.write(chunk)
 
-    default_speaker = sc.default_speaker()
-    samples, samplerate = sf.read('output.mp3')
-
-    default_speaker.play(samples, samplerate=samplerate)
+    # default_speaker = sc.default_speaker()
+    # samples, samplerate = sf.read('output.wav')
+    #
+    # default_speaker.play(samples, samplerate=samplerate)

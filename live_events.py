@@ -1,5 +1,5 @@
 import requests
-
+from commentary_phrases import get_commentary
 
 LIVE_MATCH_URL = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live"
 
@@ -22,17 +22,19 @@ def fetch_live_match_commentary():
                 matches = series['seriesAdWrapper']['matches']
                 for match in matches:
                     match_id = match['matchInfo']['matchId']
+                    print(match_id)
                     live_match_id = match_id
-
+    print("Live Match ID: ", live_match_id)
     # Fetch Commentary for the Live Match
     url_comm = f"https://cricbuzz-cricket.p.rapidapi.com/mcenter/v1/{live_match_id}/comm"
     commentary_word = ""
     if live_match_id != -1:
-        response_comm = requests.get(url_comm, headers=headers)
+        response_comm = requests.get(url_comm, headers=cricbuzz_api_headers)
         comm_dict = response_comm.json()['commentaryList'][0]
         commentary_word = comm_dict['commText']
-        commentary_word = commentary_word.strip('B0$')
-        print(commentary_word)
+        commentary_word = commentary_word.replace('B0$', '').replace('B1$', '')
+        # commentary_word = get_commentary()
+        print("Live Commentary: ", commentary_word)
     else:
         commentary_word = 'लाइव गेम में कोई अपडेट नहीं, कुछ नया होने का इंतजार है'
 

@@ -1,0 +1,2 @@
+def get_commentary():
+    return "And on that note it's a wrap from us. What a seminal day of cricket at this World Cup, as Sri Lanka revived their flagging semi-final hopes and virtually extinguished England's in the process. And expect more twists and turns tomorrow as Pakistan take on South Africa in Chennai."
